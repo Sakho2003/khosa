@@ -1,0 +1,245 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil | Votre Entreprise{% endblock %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('Asset/css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Votre Service de Transport de Colis</title>
+</head>
+<body>
+
+<!-- Barre de navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container d-flex align-items-center justify-content-between"> <!-- Utilisation de flexbox pour centrer verticalement -->
+        <a class="navbar-brand" href="{{ path('app_home') }}">
+            <img src="{{ asset('images/logo.png') }}" alt="Votre Logo">
+            Nom de Votre Entreprise
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_home') }}">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_boutique') }}">Boutique</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_suivi_colis') }}">Suivi des Colis</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_contact') }}">Contact</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto"> <!-- Utilisation de ml-auto pour déplacer vers la droite -->
+                <li class="nav-item">
+                    <a href="{{ path('app_connexion') }}" class="nav-link">Connexion</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ path('app_inscription') }}" class="nav-link">Inscription</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<!-- Section d'en-tête -->
+<section class="header-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="header-content">
+                    <h1>Bienvenue chez Notre Service de Transport de Colis</h1>
+                    <p>Expédiez vos colis en toute confiance et suivez-les en temps réel.</p>
+                    <a href="{{ path('app_boutique') }}" class="btn btn-primary">Envoyer un colis</a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="advertisement">
+                    <img src="{{ asset('public/images/parcel-delivery.jpg') }}" alt="Livraison de colis">
+                    <p>Mettez en avant les avantages de votre service ici. Parlez de la rapidité, de la fiabilité, et de la couverture internationale.</p>
+                    <a href="{{ path('page_en_savoir_plus') }}" class="btn btn-secondary">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section d'offres spéciales -->
+<section class="special-offers">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Offres Spéciales</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="offer-card">
+                    <img src="{{ asset('images/offer1.jpg') }}" alt="Offre spéciale 1">
+                    <h3>50% de réduction</h3>
+                    <p>Envoi de colis en France.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="offer-card">
+                    <img src="{{ asset('images/offer2.jpg') }}" alt="Offre spéciale 2">
+                    <h3>Offre de Bienvenue</h3>
+                    <p>10% de réduction pour les nouveaux clients.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="offer-card">
+                    <img src="{{ asset('images/offer3.jpg') }}" alt="Offre spéciale 3">
+                    <h3>Livraison Express</h3>
+                    <p>Colis livré en 24 heures.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section de produits en vedette (pour la boutique en ligne) -->
+<section class="featured-products">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Produits en Vedette</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="product-card">
+                    <img src="{{ asset('images/product1.jpg') }}" alt="Produit en vedette 1">
+                    <h3>Produit 1</h3>
+                    <p>Description du produit 1.</p>
+                    <a href="{{ path('page_details_produit', {'id': 1}) }}" class="btn btn-primary">Voir les détails</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="product-card">
+                    <img src="{{ asset('images/product2.jpg') }}" alt="Produit en vedette 2">
+                    <h3>Produit 2</h3>
+                    <p>Description du produit 2.</p>
+                    <a href="{{ path('page_details_produit', {'id': 2}) }}" class="btn btn-primary">Voir les détails</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="product-card">
+                    <img src="{{ asset('images/product3.jpg') }}" alt="Produit en vedette 3">
+                    <h3>Produit 3</h3>
+                    <p>Description du produit 3.</p>
+                    <a href="{{ path('page_details_produit', {'id': 3}) }}" class="btn btn-primary">Voir les détails</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section de contact -->
+<section class="contact-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2>Contactez-nous</h2>
+                <p>Nous sommes là pour répondre à toutes vos questions. N'hésitez pas à nous contacter à tout moment.</p>
+                <ul class="contact-info">
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:contact@votreentreprise.com">contact@votreentreprise.com</a></li>
+                    <li><i class="fas fa-phone"></i> +33 1 234 5678</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <h2>Formulaire de Contact</h2>
+                <form action="{{ path('page_envoyer_message') }}" method="post">
+                    <div class="form-group">
+                        <input type="text" name="nom" class="form-control" placeholder="Votre Nom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control" placeholder="Votre Adresse E-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" class="form-control" placeholder="Votre Message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section de réseaux sociaux -->
+<section class="social-media-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Suivez-nous sur les Réseaux Sociaux</h2>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/votreentreprise" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.twitter.com/votreentreprise" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/votreentreprise" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/votreentreprise" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section de confiance -->
+<section class="trust-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Faites-nous Confiance</h2>
+                <p>Nous sommes fiers de notre service de transport de colis de haute qualité. Voici pourquoi vous pouvez avoir confiance en nous :</p>
+                <ul class="trust-icons">
+                    <li><i class="fas fa-check-circle"></i> Livraison Rapide</li>
+                    <li><i class="fas fa-check-circle"></i> Fiabilité Garantie</li>
+                    <li><i class="fas fa-check-circle"></i> Sécurité des Transactions</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pied de page -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+          <h4>Liens Utiles</h4>
+                <ul class="footer-links">
+                    <li><a href="{{ path('page_politique_confidentialite') }}">Politique de Confidentialité</a></li>
+                    <li><a href="{{ path('page_conditions_utilisation') }}">Conditions d'Utilisation</a></li>
+                    <li><a href="{{ path('page_mentions_legales') }}">Mentions Légales</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <h4>Nous Contacter</h4>
+                <p>N'hésitez pas à nous contacter pour toute question ou préoccupation.</p>
+                <ul class="contact-info">
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:contact@votreentreprise.com">contact@votreentreprise.com</a></li>
+                    <li><i class="fas fa-phone"></i> +33 1 234 5678</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="{{ asset('js/jquery.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+</body>
+</html>
+
+{% endblock %}

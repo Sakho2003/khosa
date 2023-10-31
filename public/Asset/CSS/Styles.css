@@ -1,0 +1,257 @@
+/* Styles de base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+/* Styles pour la barre de navigation */
+.navbar {
+    background-color: #1ABC9C;
+    display: flex; /* Utilisation de Flexbox pour centrer verticalement */
+    justify-content: space-between; /* Écarte les éléments horizontalement */
+    align-items: center; /* Centre verticalement les éléments */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    color: #fff; /* Couleur du texte */
+    text-decoration: none; /* Suppression du soulignement */
+}
+
+.navbar-brand img {
+    height: 30px; /* Ajustez la hauteur de l'image de votre logo */
+    margin-right: 10px; /* Espace entre l'image et le texte */
+}
+
+/* Styles pour les liens de navigation */
+.navbar-nav .nav-item {
+    margin-right: 15px; /* Espace entre les éléments de navigation */
+}
+ul {
+    list-style: none;
+    text-align: center;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Espacement interne des liens */
+}
+
+/* Styles pour les liens de navigation au survol */
+.navbar-nav .nav-link:hover {
+    background-color: #fff;
+    color: #1ABC9C;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+/* Section d'en-tête */
+.header-section {
+    padding: 100px 0;
+    background: url('images/header-background.jpg') center center no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+.header-content {
+    margin-top: 20px;
+}
+
+.header-content h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.header-content p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Boutons */
+.btn {
+    padding: 15px 30px;
+    font-size: 18px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #333;
+    color: #fff;
+    border: none;
+}
+
+/* Section d'offres spéciales */
+.special-offers {
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.special-offers h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.offer-card {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.offer-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Section de produits en vedette */
+.featured-products {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.featured-products h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.product-card {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Section de contact */
+.contact-section {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.contact-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 15px;
+}
+
+/* Section de réseaux sociaux */
+.social-media-section {
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 24px;
+}
+
+/* Section de confiance */
+.trust-section {
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.trust-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.trust-icons {
+    list-style: none;
+    padding: 0;
+}
+
+.trust-icons li {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 24px;
+    color: #007bff;
+}
+
+/* Pied de page */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+footer h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Formulaire de contact */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Bouton d'envoi du formulaire */
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+}
+
+/* Styles pour les offres spéciales, produits, etc. */
+
+/* Ajoutez ici vos styles spécifiques pour ces sections */
+
+/* Médias queries pour la réactivité */
+@media (max-width: 768px) {
+    /* Styles pour les écrans de taille moyenne et plus petits */
+}

@@ -3,3 +3,74 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+app_home:
+    path: /
+    controller: App\Controller\HomeController::index
+
+page_en_savoir_plus:
+    path: /en-savoir-plus
+    controller: App\Controller\VotreController::enSavoirPlus
+
+boutique:
+    path: /boutique
+    controller: App\Controller\BoutiqueController::index
+
+
+page_details_produit:
+    path: /produit/{id}
+    controller: App\Controller\ProduitController::details
+
+page_envoyer_message:
+    path: /envoyer-message
+    controller: App\Controller\MessageController::envoyerMessage
+
+# Route pour la page de suivi des colis
+suivi_colis:
+    path: /suivi-colis
+    controller: App\Controller\SuiviColisController::index
+
+# Route pour la page de contact
+contact:
+    path: /contact
+    controller: App\Controller\ContactController::index
+
+# Route pour la page d'inscription
+inscription:
+    path: /inscription
+    controller: App\Controller\InscriptionController::index
+
+# Route pour la page de connexion
+connexion:
+    path: /connexion
+    controller: App\Controller\ConnexionController::index
+
+# Route pour la page du panier
+panier:
+    path: /panier
+    controller: App\Controller\PanierController::index
+
+# Route pour la page de commande
+commande:
+    path: /commande
+    controller: App\Controller\CommandeController::index
+
+# Route pour le panneau d'administration
+admin_panel:
+    path: /admin
+    controller: App\Controller\AdminPanelController::index
+
+# Route pour la page de politique de confidentialité
+page_politique_confidentialite:
+    path: /politique-de-confidentialite
+    controller: App\Controller\PagePolitiqueConfidentialiteController::index
+
+# Route pour la page de conditions d'utilisation
+page_conditions_utilisation:
+    path: /conditions-utilisation
+    controller: App\Controller\PageConditionsUtilisationController::index
+
+# Route pour la page des mentions légales
+page_mentions_legales:
+    path: /mentions-legales
+    controller: App\Controller\PageMentionsLégalesController::index
